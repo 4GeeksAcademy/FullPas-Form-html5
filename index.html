@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_HTML5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class=" container mx-auto" style="width:1000px; margin-top:5%;">
+        <div class="card bg-light " style="min-height:570px;">
+            <div class="card-header px-3 p-0 fs-3 fw-semibold">
+                Formulario de pago
+            </div>
+            <div class="card-body ">
+                <form>
+                    <div class=" bg-danger bg-opacity-25 p-2 border border-danger text-dark bg-opacity-25 rounded ">
+                        Faltan algunos campos
+                    </div>
+
+                    <div class="row ">
+                        <div class=" d-flex justify-content-evenly mt-1">
+                            <div class="col-6 p-2">
+                                <label class="form-label">Numeración de la tarjeta</label>
+                                <input type="text" class="form-control" placeholder="1234-5678-9012-3456"
+                                    pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" maxlength="19" inputmode="numeric" required
+                                    title="Debe tener 4 grupos de 4 dígitos separados por guiones, por ejemplo 1234-5678-9012-3456">
+                            </div>
+                            <div class="col-3 p-2">
+                                <label class="form-label">CSV</label>
+                                <input type="text" class="form-control" placeholder="123" pattern="^\d{3}$"
+                                    maxlength="3" inputmode="numeric" required
+                                    title="Debe contener exactamente 3 dígitos">
+                            </div>
+                            <div class="col-3 p-2">
+                                <label class="form-label">Monto</label>
+                                <input type="number" class="form-control" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div class=" d-flex justify-content-evenly mt-1">
+                            <div class="col-6 p-2">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre Simple/Común"
+                                    pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$" inputmode="text"
+                                    title="Solo se permiten letras y espacios">
+                            </div>
+                            <div class="col-6 p-2">
+                                <label class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" placeholder="Primer y segundo apellido"
+                                    pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$" inputmode="text"
+                                    title="Solo se permiten letras y espacios">
+                            </div>
+                        </div>
+                        <div class=" d-flex justify-content-evenly mt-1">
+                            <div class="col-6 p-2">
+                                <label for="province" class="form-label">Provincia</label>
+                                <select class="form-select" name="province">
+                                    <option selected>Seleccionar una provincia</option>
+                                    <option value="A Coruña">A Coruña</option>
+                                    <option value="Álava">Álava</option>
+                                    <option value="Albacete">Albacete</option>
+                                    <option value="Alicante">Alicante</option>
+                                    <option value="Almería">Almería</option>
+                                    <option value="Asturias">Asturias</option>
+                                    <option value="Ávila">Ávila</option>
+                                    <option value="Badajoz">Badajoz</option>
+                                    <option value="Barcelona">Barcelona</option>
+                                    <option value="Burgos">Burgos</option>
+                                    <option value="Cáceres">Cáceres</option>
+                                    <option value="Cádiz">Cádiz</option>
+                                    <option value="Cantabria">Cantabria</option>
+                                    <option value="Castellón">Castellón</option>
+                                    <option value="Ciudad Real">Ciudad Real</option>
+                                    <option value="Córdoba">Córdoba</option>
+                                    <option value="Cuenca">Cuenca</option>
+                                    <option value="Girona">Girona</option>
+                                    <option value="Granada">Granada</option>
+                                    <option value="Guadalajara">Guadalajara</option>
+                                    <option value="Guipúzcoa">Guipúzcoa</option>
+                                    <option value="Huelva">Huelva</option>
+                                    <option value="Huesca">Huesca</option>
+                                    <option value="Illes Balears">Illes Balears</option>
+                                    <option value="Jaén">Jaén</option>
+                                    <option value="La Rioja">La Rioja</option>
+                                    <option value="Las Palmas">Las Palmas</option>
+                                    <option value="León">León</option>
+                                    <option value="Lleida">Lleida</option>
+                                    <option value="Lugo">Lugo</option>
+                                    <option value="Madrid">Madrid</option>
+                                    <option value="Málaga">Málaga</option>
+                                    <option value="Murcia">Murcia</option>
+                                    <option value="Navarra">Navarra</option>
+                                    <option value="Ourense">Ourense</option>
+                                    <option value="Palencia">Palencia</option>
+                                    <option value="Pontevedra">Pontevedra</option>
+                                    <option value="Salamanca">Salamanca</option>
+                                    <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+                                    <option value="Segovia">Segovia</option>
+                                    <option value="Sevilla">Sevilla</option>
+                                    <option value="Soria">Soria</option>
+                                    <option value="Tarragona">Tarragona</option>
+                                    <option value="Teruel">Teruel</option>
+                                    <option value="Toledo">Toledo</option>
+                                    <option value="Valencia">Valencia</option>
+                                    <option value="Valladolid">Valladolid</option>
+                                    <option value="Vizcaya">Vizcaya</option>
+                                    <option value="Zamora">Zamora</option>
+                                    <option value="Zaragoza">Zaragoza</option>
+                                </select>
+                            </div>
+                            <div class="col-3 p-2">
+                                <label class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$"
+                                    inputmode="text" title="Solo se permiten letras y espacios">
+                            </div>
+                            <div class="col-3 p-2">
+                                <label class="form-label">Código Postal</label>
+                                <input type="text" class="form-control" pattern="^\d{5}$" maxlength="5" inputmode="numeric"
+                                    title="Solo se permiten 5 dígitos" required>
+                            </div>
+                        </div>
+
+                        <!-- Sección tarjetas -->
+                        <div class=" d-flex justify-content-evenly mt-1">
+                            <div class=" col-6 p-2 mb-3">
+                                <label class="form-label">Seleccione método de pago</label>
+                                <div class="d-flex gap-4 bg-secondary bg-opacity-50 p-2 rounded justify-content-center">
+                                    <!-- MasterCard -->
+                                    <input type="radio" class="btn-check">
+                                    <label class="btn btn-outline-light" data-bs-toggle="modal"
+                                        data-bs-target="#confirmMastercard">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                                            width="40">
+                                    </label>
+                                    <!-- Visa -->
+                                    <input type="radio" class="btn-check">
+                                    <label class="btn btn-outline-light" data-bs-toggle="modal"
+                                        data-bs-target="#confirmVisa">
+                                        <img src="https://logos-world.net/wp-content/uploads/2020/06/Visa-Logo-1976.png"
+                                            width="40">
+                                    </label>
+                                    <!-- Diners -->
+                                    <input type="radio" class="btn-check">
+                                    <label class="btn btn-outline-light" data-bs-toggle="modal"
+                                        data-bs-target="#confirmDiners">
+                                        <img src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0029/8143/diners.jpg?1519766094"
+                                            width="40">
+                                    </label>
+                                    <!-- Amex -->
+                                    <input type="radio" class="btn-check">
+                                    <label class="btn btn-outline-light" data-bs-toggle="modal"
+                                        data-bs-target="#confirmAmex">
+                                        <img src="https://i.pinimg.com/originals/c9/10/94/c910944ac6247ed2d0d47279453c5959.jpg"
+                                            width="40">
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Modales de confirmación -->
+                            <div>
+                                <div class="modal fade" id="confirmMastercard" data-bs-backdrop="static"
+                                    data-bs-keyboard="false">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Confirmar método de pago</h5>
+                                                <button type="button" class="btn-close"
+                                                    data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                                                    alt="MasterCard" width="60" class="mb-3">
+                                                <p>¿Deseas confirmar el pago con <strong>MasterCard</strong>?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Escoger otra</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-dismiss="modal">Confirmar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="confirmVisa" data-bs-backdrop="static"
+                                    data-bs-keyboard="false">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Confirmar método de pago</h5>
+                                                <button type="button" class="btn-close"
+                                                    data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="https://logos-world.net/wp-content/uploads/2020/06/Visa-Logo-1976.png"
+                                                    alt="Visa" width="60" class="mb-3">
+                                                <p>¿Deseas confirmar el pago con <strong>Visa</strong>?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Escoger otra</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-dismiss="modal">Confirmar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="confirmDiners" data-bs-backdrop="static"
+                                    data-bs-keyboard="false">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Confirmar método de pago</h5>
+                                                <button type="button" class="btn-close"
+                                                    data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0029/8143/diners.jpg?1519766094"
+                                                    alt="Diners Club" width="60" class="mb-3">
+                                                <p>¿Deseas confirmar el pago con <strong>Diners Club</strong>?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Escoger otra</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-dismiss="modal">Confirmar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="confirmAmex" data-bs-backdrop="static"
+                                    data-bs-keyboard="false">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Confirmar método de pago</h5>
+                                                <button type="button" class="btn-close"
+                                                    data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img src="https://i.pinimg.com/originals/c9/10/94/c910944ac6247ed2d0d47279453c5959.jpg"
+                                                    alt="Amex" width="60" class="mb-3">
+                                                <p>¿Deseas confirmar el pago con <strong>American Express</strong>?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Escoger otra</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-dismiss="modal">Confirmar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 p-2">
+                                <label class="form-label">Comentarios</label>
+                                <textarea class="form-control" placeholder="Escriba aquí sus comentarios"
+                                    maxlength="100"></textarea>
+                                <label>Máx. 100 carácteres</label>
+                            </div>
+                        </div>
+
+                        <div class=" card-footer d-flex justify-content-evenly mt-1">
+                            <div class="d-flex justify-content-end gap-4 mx-1">
+                                <button type="reset" class="btn btn-secondary">Cancelar</button>
+                                <button type="reset" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalExito">Enviar</button>
+                                <div class="modal fade" id="modalExito" data-bs-backdrop="static"
+                                    data-bs-keyboard="false">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-success text-white">
+                                                <h5 class="modal-title">Formulario enviado con éxito!</h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                    data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <p>Gracias por enviar el formulario. Hemos recibido tus datos
+                                                    correctamente.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-success"
+                                                    data-bs-dismiss="modal">Aceptar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
